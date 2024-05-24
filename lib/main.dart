@@ -22,10 +22,11 @@ class BallPage extends StatelessWidget {
         ),
       ),
       backgroundColor: Colors.blue,
-      body:Ball(),
+      body: Ball(),
     );
   }
 }
+
 class Ball extends StatefulWidget {
   const Ball({super.key});
 
@@ -37,7 +38,14 @@ class _BallState extends State<Ball> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child:Image.asset('images/ball1.png',),
+      child: TextButton(
+        child: Image.asset(
+          'images/ball1.png',
+        ),
+        onPressed: () {
+          print('I got clicked');
+        },
+      ),
     );
   }
 }
