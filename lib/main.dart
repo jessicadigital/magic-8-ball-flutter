@@ -45,8 +45,10 @@ class _BallState extends State<Ball> {
           'images/ball$ballNumber.png',
         ),
         onPressed: () {
-          ballNumber = Random().nextInt(5)+1;
-          print('New ball number is $ballNumber');
+          setState(() {
+            ballNumber = Random().nextInt(5) + 1;
+            print('New ball number is $ballNumber');
+          });
         },
       ),
     );
